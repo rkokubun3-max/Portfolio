@@ -1,0 +1,266 @@
+body {
+  margin: 0;
+  background-color: #0a0a0f;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding-top: 10px;
+  gap: 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-flex > a {
+  color: #a03609;
+  text-decoration: none;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "hero-row1 hero-sidebar"
+    "hero-row2 hero-sidebar"
+    "hero-row3 hero-sidebar"
+    "hero-row4 hero-sidebar";
+  place-items: center;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "about-row1 about-row1"
+    "about-row2-left about-row2-right";
+  place-items: center;
+}
+
+.resume-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "resume-row1 resume-row1"
+    "resume-row2-left resume-row2-right"
+    "resume-row3 resume-row3"
+    "resume-row4 resume-row4";
+}
+
+.projects-layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-box {
+  height: 400px;
+  width: 300px;
+  background-color: yellow;
+  margin: 0px 10px 20px 10px;
+}
+
+.resume-row1 {
+  grid-area: resume-row1;
+  color: white;
+}
+
+.resume-row2-left {
+  grid-area: resume-row2-left;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-row2-right {
+  grid-area: resume-row2-right;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.resume-row3 {
+  grid-area: resume-row3;
+  color: white;
+}
+
+.resume-row4 {
+  grid-area: resume-row4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.resume-row4 img {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(179deg)
+    brightness(101%) contrast(101%);
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.about-row1 {
+  grid-area: about-row1;
+  color: white;
+  justify-self: start;
+}
+
+.about-row2-left {
+  grid-area: about-row2-left;
+  color: white;
+  align-self: start;
+}
+
+.about-row2-right {
+  align-self: start;
+  grid-area: about-row2-right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "qf-row1 qf-row1"
+    "qf-row2-left qf-row2-right"
+    "qf-row3-left qf-row3-right";
+}
+
+.qf {
+  background-color: #1a1a2e;
+  padding: 5px;
+  margin: 0px 20px 20px 20px;
+  border-radius: 10px;
+}
+
+.about-row2-right p {
+  color: white;
+}
+
+.qf-row1 {
+  color: #a03609;
+}
+
+.qf-row2-left {
+  grid-area: qf-row2-left;
+}
+
+.qf-row2-right {
+  grid-area: qf-row2-right;
+}
+
+.qf-row3-left {
+  grid-area: qf-row3-left;
+}
+
+.qf-row3-right {
+  grid-area: qf-row3-right;
+}
+
+.hero-row1 {
+  grid-area: hero-row1;
+  color: #a03609;
+}
+
+.hero-row2 {
+  grid-area: hero-row2;
+  color: white;
+}
+
+.hero-row3 {
+  grid-area: hero-row3;
+  color: white;
+  font-size: 28px;
+}
+
+.hero-row4 {
+  grid-area: hero-row4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-row4 img {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(179deg)
+    brightness(101%) contrast(101%);
+  height: 30px;
+}
+
+.hero-sidebar {
+  grid-area: hero-sidebar;
+}
+
+.hero {
+  margin: 2;
+}
+
+.grey-text {
+  color: grey;
+}
+
+.container > h2 {
+  color: white;
+  margin-top: 100px;
+}
+
+p {
+  color: white;
+}
+
+footer p {
+  text-align: end;
+}
+
+.card-text {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .hero-layout {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero-sidebar"
+      "hero-row1"
+      "hero-row2"
+      "hero-row3"
+      "hero-row4";
+    text-align: center;
+  }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "about-row1"
+      "about-row2-left"
+      "about-row2-right";
+    place-items: center;
+  }
+
+  .container > h2 {
+    color: white;
+    margin-top: 40px;
+  }
+}
