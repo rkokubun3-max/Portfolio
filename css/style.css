@@ -235,6 +235,10 @@ footer p {
   color: black;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
 @media (max-width: 768px) {
   .hero-layout {
     grid-template-columns: auto;
